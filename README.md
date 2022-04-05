@@ -1,92 +1,37 @@
-## Kakao oAuth
+# Checkmate (출석을 위한 프로그레시브웹앱)
 
-We need 
+> 같은 반 학우들을 위해 만든 프로젝트
 
-- composer require laravel/socialite
+![logo](./intro.png)
 
-- composer require socialiteproviders/kakao
+평소 학교 출결은 반장이 직접 체크하고 보고하는 방식이었습니다. 그 방식은 번거롭고 실수를 할 가능성이 있었습니다.
+그래서 반장의 실수도 줄이면서 학생들이 출석도 하고 교수님이 간편하게 출결을 볼 수 있는 것을 만들면 어떨까?라고 생각했습니다.
+프로그래시브웹앱으로 만들었고 실제 출결에 사용했습니다.
 
-- composer require socialiteproviders/manager
+# 특징
 
+- 반장 없이도 출석체크가 가능
+- 출결을 자동 계산하여 교수님이 확인 가능
+- 자신의 출결 현황도 확인 가능
 
-- [SocialController](https://github.com/https-github-com-InJoon-L/jhp-laravel/blob/master/app/Http/Controllers/SocialController.php).
+# 주요 기능
 
-- [route(web.php)](https://github.com/https-github-com-InJoon-L/jhp-laravel/blob/master/routes/web.php).
-- [Migration (2021_07_19_103132_add_users_col.php)](https://github.com/https-github-com-InJoon-L/jhp-laravel/blob/master/database/migrations/2021_07_19_103132_add_users_col.php).
+## 출석체크
 
-- [config(services.php)](https://github.com/https-github-com-InJoon-L/jhp-laravel/blob/master/config/services.php).
+> 교실 근처에서 출석 체크가 가능
 
-----------------------------------------------------------------------------------------------
+## 출결확인
 
-.env
+> 자신은 자신의 출결을 확인, 교수님은 전체 학생의 출결 확인 가능
 
-KAKAO_KEY=
+## 통계확인
 
-KAKAO_SECRET=
+> 자신의 출결 통계를 차트로 확인
 
-KAKAO_REDIRECT_URI=
+## 랭킹
 
-----------------------------------------------------------------------------------------------
+> 주 / 월 별로 출석 수, 지각 수, 결석 수를 확인 가능
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## 기타
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+> 학교 공지사항, 시간표 확인 가능
